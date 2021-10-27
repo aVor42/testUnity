@@ -6,6 +6,7 @@ public class Finish : MonoBehaviour
 {
 
     private bool _isActivated = false;
+    private int _testGitVariable = 42;
 
     public void Activate() =>
         _isActivated = true;
@@ -13,9 +14,10 @@ public class Finish : MonoBehaviour
 
     public void FinishLevel()
     {
-        if (_isActivated)
+        if (_isActivated && _testGitVariable > 0)
         {
             gameObject.SetActive(false);
+            ++_testGitVariable;
         }
     }
 }
